@@ -76,3 +76,18 @@ ax2.set_xlabel("클래스 (0~9)")
 ax2.set_ylabel("확률")
 ax2.set_ylim(0, 1)
 st.pyplot(fig2)
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+import platform
+
+# 한글 폰트 설정
+if platform.system() == 'Windows':
+    plt.rc('font', family='Malgun Gothic')  # 맑은 고딕
+elif platform.system() == 'Darwin':  # macOS
+    plt.rc('font', family='AppleGothic')
+else:  # Linux (예: Streamlit Cloud)
+    plt.rc('font', family='NanumGothic')
+
+# 마이너스 기호 깨짐 방지
+plt.rcParams['axes.unicode_minus'] = False
+
