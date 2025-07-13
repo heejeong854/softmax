@@ -29,7 +29,7 @@ MNIST 테스트 이미지 중 하나를 선택하여 모델의 예측 결과를 
 """)
 import streamlit as st
 
-st.header("softmax는 logit → 확률 분포로 바꿔주는 함수이다.")
+st.header("softmax는 logit → 확률 분포로 바꿔주는 함수.")
 
 st.write("logit을 지수함수로 바꾼 정규화하여 확률 분포로 만든다. 확인해보자!")
 
