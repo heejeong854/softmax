@@ -22,11 +22,17 @@ def softmax(logits):
     exps = torch.exp(logits - torch.max(logits))
     return exps / torch.sum(exps)
 
-st.title("🧠 Softmax 숫자 인식 시뮬레이터 (간단 버전)")
+st.title("🧠 Softmax 숫자 인식 시뮬레이터")
 
 st.markdown("""
 MNIST 테스트 이미지 중 하나를 선택하여 모델의 예측 결과를 확인해보세요.
 """)
+import streamlit as st
+
+st.header("softmax는 logit → 확률 분포로 바꿔주는 함수이다.")
+
+st.write("logit을 지수함수로 바꾼 정규화하여 확률 분포로 만든다. 확인해보자!")
+
 
 # 이미지 transform 정의
 transform = transforms.Compose([
