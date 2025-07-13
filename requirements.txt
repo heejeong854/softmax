@@ -3,4 +3,3 @@ matplotlib
 torch
 torchvision
 numpy
-scikit-learn
